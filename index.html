@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="mobile-web-app-capable" content="yes">
-  <title>My Figma Game</title>
+  <title>Bingo Word Game</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden; /* Scroll tamamen kapalı */
-      background: #000; /* Arkaplan siyah olsun, taşma varsa belli olmasın */
+      overflow: hidden;
+      background: #000;
     }
     iframe {
       border: none;
@@ -25,7 +24,12 @@
   </style>
 </head>
 <body>
-  <!-- Buraya kendi Figma prototip linkini koy -->
-  <iframe src="https://embed.figma.com/proto/zmm8iqEtR9RVwUZkSBHRmU/Untitled?node-id=2-3&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A3&embed-host=share" allowfullscreen></iframe>
+  <iframe src="FIGMA_PROTOTYPE_URL" allowfullscreen></iframe>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
 </body>
 </html>
