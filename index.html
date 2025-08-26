@@ -12,14 +12,23 @@
       height: 100%;
       overflow: hidden;
       overscroll-behavior: none;
-      background: #000; /* kenarlarda beyaz boşluk görünmesin diye */
+      background: #000;
     }
+
+    body {
+      /* iOS çentik ve alt bar uyumu */
+      padding-top: env(safe-area-inset-top);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+    }
+
     iframe {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh; /* ekranı tam kapla */
       border: none;
       display: block;
     }
