@@ -1,52 +1,31 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Prototip</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>My Figma Game</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
       height: 100%;
-      overflow: hidden;
-      overscroll-behavior: none;
-      background: #000;
+      width: 100%;
+      overflow: hidden; /* Scroll tamamen kapalı */
+      background: #000; /* Arkaplan siyah olsun, taşma varsa belli olmasın */
     }
-
-    body {
-      /* iOS çentik ve alt bar uyumu */
-      padding-top: env(safe-area-inset-top);
-      padding-right: env(safe-area-inset-right);
-      padding-bottom: env(safe-area-inset-bottom);
-      padding-left: env(safe-area-inset-left);
-    }
-
     iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh; /* ekranı tam kapla */
       border: none;
+      width: 100vw;
+      height: 100vh;
       display: block;
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="https://embed.figma.com/proto/zmm8iqEtR9RVwUZkSBHRmU/Untitled?node-id=2-3&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A3&embed-host=share" 
-    allowfullscreen>
-  </iframe>
-
-  <script>
-    // Safari’nin drag hareketini scroll sanmasını engelle
-    document.addEventListener('touchmove', function(e) {
-      if (e.target.tagName === 'IFRAME') {
-        e.preventDefault();
-      }
-    }, { passive: false });
-  </script>
+  <!-- Buraya kendi Figma prototip linkini koy -->
+  <iframe src="https://embed.figma.com/proto/zmm8iqEtR9RVwUZkSBHRmU/Untitled?node-id=2-3&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A3&embed-host=share" allowfullscreen></iframe>
 </body>
 </html>
